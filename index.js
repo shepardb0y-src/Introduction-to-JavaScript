@@ -60,8 +60,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/) {
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b;
 }
 
 
@@ -76,8 +76,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {
-  /*add your code here*/
+function dogYears(age) {
+  let humanYears = age * 7;
+  return humanYears;
 }
 
 
@@ -163,8 +164,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(km) {
+
+  return km * 0.621371;
 }
 
 
@@ -177,8 +179,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(cm) {
+  return cm / 30.48;
 }
 
 
@@ -193,8 +195,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(number) {
+  for (let i = 0; i <= number; i++) {
+    if (i === number) {
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number} bottles of soda on the wall`
+    }
+  }
 }
 
 
