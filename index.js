@@ -120,10 +120,14 @@ function hungryDog(weight, age) {
     return weight * 0.04;
   } else if (age >= 1 && weight >= 11 && weight <= 15) {
     return weight * 0.03;
-  } else if (age >= 1 && age >= 0.583) {
+  } else if (age >= 1 && weight > 15) {
+    return weight * 0.02;
+  } else if (age > 1 && age >= 0.583) {
     return weight * 0.04;
   } else if (age < 0.583 && age >= 0.333) {
     return weight * 0.05;
+  } else if (age < 0.333) {
+    return weight * 0.1;
   }
 
 }
@@ -147,14 +151,25 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 
+const comp=Math.floor(Math.random ()*3);
+console.log(comp);
+sciscor =0;
+paper =1;
+rock=2;
+0 beats 1 , 1 beats 2, 2 beats 0;
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.floor((Math.random()));
 function game(user, computer) {
-  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie";
+  } else if (user > computer) {
+    return "you win!"
+  } else if (user < computer) {
+    return "you lose!";
+  }
 }
-
-
+console.log(2, computer);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -215,7 +230,7 @@ function annoyingSong(number) {
 Using the grade function below do the following: 
 1. Receive a score out of 100 
 2. Return the corresponding letter grade following this grade scale:
-
+ 
  90-100 should return 'you got an A' 
  80-89 should return 'you got a B'
  70-79 should return 'you got a C'
@@ -248,7 +263,7 @@ console.log(grade(100));
 Using the vowelCounter function below do the following:
 1. Receive a string as a parameter
 2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
+ 
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
 */
